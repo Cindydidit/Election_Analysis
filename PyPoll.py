@@ -2,8 +2,8 @@
 # 1. The total number of votes cast. CHECK
 # 2. A complete list of candidates who received votes. CHECK
 # 3. The percentage of votes each candidate won. CHECK
-# 4. The total number of votes each candidate won
-# 5. The winner of the election based on popular vote
+# 4. The total number of votes each candidate won. CHECK
+# 5. The winner of the election based on popular vote. CHECK
 
 # Assign a variable for the file to load and the path.
 #file_to_load = 'Resources\election_results.csv'
@@ -13,6 +13,7 @@
     #print(election_data)
 
 # Add dependecies
+from __future__ import print_function
 import csv
 import os
 # Assign a varible for the file to load and the path.
@@ -77,10 +78,20 @@ with open(file_to_load) as election_data:
             candidate_votes[candidate_name] = 0
         # Increment each candidate's vote by one as counted.
         candidate_votes[candidate_name] += 1
-# Print the candidate votes dictionary.
-#print(candidate_votes)
 
-# Calculate the percentage of votes each candidate received.
+# Save the election results to the text file in "w" mode.
+with open(file_to_save, "w") as txt_file:
+    # Assign a variable and print the electon results to the terminal.
+    election_results = (
+        f"\nElection Results\n"
+        f"-------------------------\n"
+        f"Total Votes: {total_votes:,}\n"
+        f"-------------------------\n")
+    print(election_results, end="")
+    # Save the final vote count to the text file.
+    txt_file.write(election_results)
+
+    # Calculate the percentage of votes each candidate received.
     # Use for loop to iterate throught the candidate_options=[] results and retreive the candidate_name from the candidate_votes{}.
     # Candidate_options loop:
     for candidate_name in candidate_votes:
@@ -88,8 +99,11 @@ with open(file_to_load) as election_data:
         votes = candidate_votes[candidate_name]
         # Calculate the percentage of the votes.
         vote_percentage = float(votes) / float(total_votes) * 100
-        # Print the candidates' names and the percantage of votes they received using f-string formatting to one decimal.
-        print(f"{candidate_name}: received {vote_percentage:.1f}% of the votes.")
+        # Assign variable and print the candidates' names, vote percantage, and vote count using f-string formatting to one decimal, to the terminal.
+        candidate_results=(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
+        print(candidate_results)
+        # Save candidate results to the text file.
+        txt_file.write(candidate_results)
         # If statement to calculate winning count.
         if (votes>winning_count) and (vote_percentage>winning_percentage):
             # If true than...
@@ -107,3 +121,5 @@ with open(file_to_load) as election_data:
         f"Winning Percentage: {winning_percentage:.1f}%\n"
         f"-----------------------\n")
     print(winning_candidate_summary)
+    # Save the winning candidate's summary to the text file.
+    txt_file.write(winning_candidate_summary)
