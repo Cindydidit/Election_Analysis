@@ -14,7 +14,8 @@ The Colorado Board of Elections is conducting an audit of a recent local congres
 - Software: Python 3.7.6, Visual Studio Code 1.71.2
 
 ## Summary
-![alt text](Resources\pollypy_election_analysis.png)
+![alt text]()
+
 The photo above displays that election analysis shows the following:
 - 369,711 votes were cast in the election.
 - The candidates were:
@@ -36,7 +37,8 @@ To complete the audit, the Colorado Board of Elections Commission has requested 
 3. The county with the highest turnout
 
 ## Challenge Summary
-![alt text]("C:\Users\joshua toussaint&FAM\Desktop\Election_Analysis\Resources\pollypy_election_analysis.png")
+![alt text](Resources/challenge_election_results.png)
+
 The photo above displays more information as requested by the commission:
 - 369,711 votes were cast in the election.
 - The counties were:
