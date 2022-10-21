@@ -1,7 +1,7 @@
 # Election_Analysis
 
 ## Project Overview
-The Colorado Board of Elections is conducting an audit of a recent local congressional election. Tom, a staff member, at has given me the following tasks to complete:
+The Colorado Board of Elections is conducting an audit of a recent local congressional election. Tom, a staff member, has given me the following tasks to complete:
 
 1. Calculate the total number of votes cast.
 2. Provide a complete list of the candidates who received votes.
@@ -14,9 +14,9 @@ The Colorado Board of Elections is conducting an audit of a recent local congres
 - Software: Python 3.7.6, Visual Studio Code 1.71.2
 
 ## Summary
-![alt text]()
+![alt text](Resources/pollypy_election_analysis.png)
 
-The photo above displays that election analysis shows the following:
+The photo above displays the results of the election analysis:
 - 369,711 votes were cast in the election.
 - The candidates were:
 	- Charles Casper Stockham
@@ -64,4 +64,4 @@ The photo above displays more information as requested by the commission:
 In future elections, this very script can be used and modified to deliver the tasks requested. For the sake of accuracy, the csv file name should be updated. Additionally, the text file name should also be updated with concise labels, this will ensure that the appropriate data is being audited. Lastly, it is important that the new data be reviewed to ensure that all extracted variables are accurately indexed. The code for each suggestion is displayed below.
 
 ![alt text](Resources/file_names_to_update.png)
-![alt text](indexed_objects.png)
+![alt text](Resources/indexed_objects.png)
