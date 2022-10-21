@@ -60,5 +60,6 @@ The photo above displays more information as requested by the commission:
   
 ## Summary Statement
 In future elections, this very script can be used and modified to deliver the tasks requested. For the sake of accuracy, the csv file name should be updated. Additionally, the text file name should also be updated with concise labels, this will ensure that the appropriate data is being audited. Lastly, it is important that the new data be reviewed to ensure that all extracted variables are accurately indexed. The code for each suggestion is displayed below.
-![alt text](file_names_to_update.png)
+
+![alt text](Resources/file_names_to_update.png)
 ![alt text](indexed_objects.png)
